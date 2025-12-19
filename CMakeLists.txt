@@ -67,3 +67,13 @@ if(BUILD_TESTS)
             m
     )
 endif()
+
+# Dockerfile
+
+install(TARGETS mathix_app
+        RUNTIME DESTINATION bin)
+
+if(BUILD_TESTS)
+    install(TARGETS mathix_tests
+            RUNTIME DESTINATION bin)
+endif()
