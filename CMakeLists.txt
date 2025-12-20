@@ -20,6 +20,7 @@ set(MATHIX_SOURCES
         source/units/time.c
         source/units/volume_imperial.c
         source/units/volume_metric.c
+        source/scientific_constants.c
 )
 
 add_library(mathix STATIC ${MATHIX_SOURCES})
