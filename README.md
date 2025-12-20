@@ -6,6 +6,8 @@ Mathix is a console-based scientific calculator written in C and NASM. It allows
 - C
 - NASM
 - CMake
+- Unity framework (unit tests)
+- Docker
 
 ## Unit systems
 
