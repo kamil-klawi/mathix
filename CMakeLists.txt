@@ -20,6 +20,7 @@ set(MATHIX_SOURCES
         source/units/time.c
         source/units/volume_imperial.c
         source/units/volume_metric.c
+        source/scientific_constants.c
 )
 
 add_library(mathix STATIC ${MATHIX_SOURCES})
@@ -66,4 +67,14 @@ if(BUILD_TESTS)
             PRIVATE mathix
             m
     )
+endif()
+
+# Dockerfile
+
+install(TARGETS mathix_app
+        RUNTIME DESTINATION bin)
+
+if(BUILD_TESTS)
+    install(TARGETS mathix_tests
+            RUNTIME DESTINATION bin)
 endif()
